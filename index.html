@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="bridge">
+	<head>
+		<title>Bridge</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			.wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			.md-button img {
+				vertical-align: -8px;
+			}
+			.md-button {
+				padding: 3px !important;
+				margin: 3px !important;
+			}
+			.grid {
+				max-width: 760px !important;
+				width: 100vw;
+			}	
+			.raised {
+				background: #f9f9f9 !important;
+				color: #333 !important;
+				box-shadow: 
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+	</head>
+	<body ng-controller="main" md-colors="{background: 'blue-grey-700'}">
+		<div class="wrapper" layout="column" layout-align="center center">
+		<div class="md-display-2" md-colors="{color: 'grey-100'}" style="padding: 8px 0">Bridge</div>
+			<div class="grid" id="grid" layout="row">
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} NT</md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} <img src="./icons/spade.png"></md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} <img src="./icons/heart.png"></md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} <img src="./icons/club.png"></md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} <img src="./icons/diamond.png"></md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" md-colors="{background: 'green-500'}" ng-repeat="n in [1,2,3,4,5,6,7]">Pass</md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" md-colors="{background: 'red-500'}" ng-repeat="n in [1,2,3,4,5,6,7]">Double</md-button>
+				</div>
+				<div class="col" layout="column" layout-align="space-around center">
+					<md-button class="md-button" md-colors="{background: 'blue-500'}" ng-repeat="n in [1,2,3,4,5,6,7]">Re-Double</md-button>
+				</div>
+			</div>
+		</div>
+		<!--Dependencies-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+		<script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+		</body>
+</html>
